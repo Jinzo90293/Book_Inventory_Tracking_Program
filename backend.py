@@ -50,12 +50,3 @@ def update(id, title, author, year, isbn):
     cur.execute("UPDATE book SET title=?, author=?, year=?, isbn=? WHERE id=?", (title, author, year, isbn, id))
     con.commit()
     con.close()
-
-
-connect()
-insert(title="The Glass Castle", author="Jeannette Walls", year=2005, isbn=54654165)
-insert(title="Great Fire", author="James Williams", year=2001, isbn=21858763)
-insert(title="Fallen Star", author="Nancy Young", year=1995, isbn=78987456)
-update(3, title="Fallen Sun", author="Gilbert Clark", year=2000, isbn=78987456)
-print(view())
-print(search(author="Gilbert Clark"))
